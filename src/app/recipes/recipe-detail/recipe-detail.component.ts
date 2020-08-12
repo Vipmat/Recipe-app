@@ -8,7 +8,7 @@ import { Recipe } from '../recipe.model';
   styleUrls: ['./recipe-detail.component.css']
 })
 export class RecipeDetailComponent implements OnInit {
-  @Input() recipe: Recipe;
+  @Input() recipe: Recipe; // Recipe property to be sent across to the parent component
 
   constructor() { }
 

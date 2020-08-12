@@ -9,7 +9,7 @@ import { Recipe } from '../../recipe.model';
 })
 export class RecipeItemComponent implements OnInit {
   @Input() recipe: Recipe;
-  @Output() recipeSelected = new EventEmitter<void>();
+  @Output() recipeSelected = new EventEmitter<void>(); // The empty recipeSelected event can be listened from its parent
 
   constructor() { }
 
