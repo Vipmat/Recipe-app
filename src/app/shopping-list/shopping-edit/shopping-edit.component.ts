@@ -8,8 +8,8 @@ import { Ingredient } from '../../shared/ingredient.model';
   styleUrls: ['./shopping-edit.component.css']
 })
 export class ShoppingEditComponent implements OnInit {
-  @ViewChild('nameInput', { static: false}) nameInputRef: ElementRef;
-  @ViewChild('amountInput', { static: false}) amountInputRef: ElementRef;
+  @ViewChild('nameInput', { static: false}) nameInputRef: ElementRef;  // To Collect the value from the DOM input
+  @ViewChild('amountInput', { static: false}) amountInputRef: ElementRef;  // To Collect the value from the DOM input
   @Output() ingredientAdded = new EventEmitter<Ingredient>();
 
   constructor() { }
@@ -21,7 +21,7 @@ export class ShoppingEditComponent implements OnInit {
     const ingName = this.nameInputRef.nativeElement.value;
     const ingAmount = this.amountInputRef.nativeElement.value;
     const newIngredient = new Ingredient(ingName, ingAmount);
-    this.ingredientAdded.emit(newIngredient);
+    this.ingredientAdded.emit(newIngredient); // Emit the data to the parent component
   }
 
 }
