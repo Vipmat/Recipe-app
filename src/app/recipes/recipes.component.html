@@ -7,10 +7,11 @@
   <div class="col-md-7">
     <app-recipe-detail
       *ngIf="selectedRecipe; else infoText"
-      [recipe]="selectedRecipe"></app-recipe-detail>
-      <!--  Bind selectedRecipe to the recipe property from recipe-detail  -->
-      <ng-template #infoText>
-        <p>Please select a Recipe</p>
-      </ng-template>
+      [recipe]="selectedRecipe"
+    ></app-recipe-detail>
+    <!--  Bind selectedRecipe to the recipe property from recipe-detail  -->
+    <ng-template #infoText>
+      <p>Please select a Recipe</p>
+    </ng-template>
   </div>
 </div>
