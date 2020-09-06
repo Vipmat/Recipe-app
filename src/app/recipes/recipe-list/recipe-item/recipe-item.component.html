@@ -1,7 +1,8 @@
 <a
   style="cursor: pointer"
   class="list-group-item clearfix"
-  (click)="onSelected()"
+  [routerLink]="[index]"
+  routerLinkActive="active"
 >
   <!-- click listener will call onSelect method that will trigger an EventEmitter-->
   <div class="pull-left">
