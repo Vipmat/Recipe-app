@@ -33,7 +33,7 @@
             type="submit"
             [disabled]="!f.valid"
           >
-            Add
+            {{ editMode ? "Update" : "Add" }}
           </button>
           <button class="btn btn-danger mx" type="button">Delete</button>
           <button class="btn btn-primary mx" type="button">Clear</button>
