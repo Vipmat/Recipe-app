@@ -167,6 +167,7 @@ export class AuthService {
         break;
       case 'INVALID_PASSWORD':
         errorMessage = 'This password is not correct.';
+        break;
     }
     return throwError(errorMessage);
   }
